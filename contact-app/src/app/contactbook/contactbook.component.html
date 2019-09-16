@@ -1,0 +1,27 @@
+<div class="header">
+  <h2>Contact Management System</h2>
+</div>
+<div>
+  <button class="button"  (click)="onClickAdd()">Add Contact</button>
+</div>
+<!--Contact List Table to add entries -->
+<div class="table">
+  <table>
+      <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>View Details</th>
+      </thead>
+      <tbody>
+        <tr  *ngFor ="let c of parentListOfContacts"> 
+          <td>{{c.FirstName}}</td>
+          <td>{{c.LastName}}</td>
+          <td><button  id="viewBtn" value="{{c._id}}" #view (click)="onClickView(c._id)">View Details</button></td>
+        </tr>
+
+      </tbody>
+  </table>
+</div>
+<app-add-form  *ngIf="isOn" (valueChange)="isOn= false" ></app-add-form>
+<app-view-detail  *ngIf="isView" [childmessage]="parentmessage" (viewChange)="isView= false"></app-view-detail>
+

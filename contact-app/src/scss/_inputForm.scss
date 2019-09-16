@@ -1,0 +1,32 @@
+//this is the css for form which will accept data
+.formParent {
+  border-radius: 5px;
+  width: 200px;
+  border: 1px solid black;
+  background-color: $backgroud_color;
+  padding: $padding;
+  position: absolute;
+  top: 120px;
+  left: 600px;
+}
+
+//css for details view of data
+.form-detail {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  @extend %visibility;
+  margin-right: $margin;
+  border: $border;
+  z-index: 10;
+}
+
+%visibility {
+  position: fixed;
+}
+
+//close button css
+#btnClose {
+  border-radius: 5px;
+  background-color: peachpuff;
+}

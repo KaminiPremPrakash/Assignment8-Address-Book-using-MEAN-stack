@@ -1,0 +1,17 @@
+<!-- contact view form to view a particular contact data -->
+<div class="formParent form-popup" id="detailform">
+ 
+  <label name="fname">First Name : </label>
+  <label name="dfname" id="dfname">{{FirstName}}</label> <br>
+
+  <label name="lname">Last Name : </label>
+  <label name="dlname"    id="dlname">{{LastName}}</label> <br>
+
+  <label name="email">Email : </label>
+  <label name="demail"  id="demail">{{Email}}</label> <br>
+
+  <label name="phone">phone : </label>
+  <label name="dphone"  id="dphone" >{{Phone}}</label><br>
+
+  <button class="button" id="btnClose" (click)="onClickClose()">Close</button>
+</div>
